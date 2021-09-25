@@ -2,7 +2,7 @@
 
 const container = document.querySelector('#container');
 const pokeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
-const pokeInfo = "https://cn.portal-pokemon.com/play/pokedex/"
+const pokeInfo = "https://sg.portal-pokemon.com/play/pokedex/"
 const generations = {
     1: { id: 'firstGen', name: 'First Generation', first: 1, last: 151 },
     2: { id: 'secondGen', name: 'Second Generation', first: 152, last: 251 },
