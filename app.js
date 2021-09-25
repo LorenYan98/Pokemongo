@@ -2,7 +2,7 @@
 
 const container = document.querySelector('#container');
 const pokeUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
-
+const pokeInfo = "https://cn.portal-pokemon.com/play/pokedex/"
 const generations = {
     1: { id: 'firstGen', name: 'First Generation', first: 1, last: 151 },
     2: { id: 'secondGen', name: 'Second Generation', first: 152, last: 251 },
@@ -55,12 +55,18 @@ for (let g = 1; g <= numGenerations; g++) {
         const pokemon = document.createElement('div');
         pokemon.classList.add('pokemon');
         // the image itself
+        const alink = document.createElement('a')
+        let str = "" + i
+        let pad = "000"
+        let ans = pad.substring(0, pad.length - str.length) + str
+        alink.href = pokeInfo + ans.toString();
         const img = document.createElement('img');
         img.src = pokeImg;
         const label = document.createElement('span');
         label.innerText = `#${i}`;
         // append all
-        pokemon.appendChild(img);
+        pokemon.appendChild(alink);
+        alink.appendChild(img);
         pokemon.appendChild(label);
         generationContainer.appendChild(pokemon);
         h2.appendChild(generationContainer);
