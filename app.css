@@ -67,7 +67,13 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 3px;
+    transition: all 0.25s
 }
+.pokemon:hover{
+    transform: translateY(-0.2em);
+    background-color: rgba(192, 101, 192, 0.6);
+}
+
 .pokemon img {
     display: block;
 }
@@ -87,5 +93,10 @@ a:hover {
     .credits {
         /* more distance for big screens */
         margin-top: 110px;
+    }
+}
+@media(max-width:470px){
+    h1{
+        font-size: 3em;
     }
 }
